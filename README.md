@@ -45,7 +45,7 @@ Package processLog
   
   Constructor
   - `IPFrequency()`: Construct an empty frequency table.
-  - `IPFrequency(InputStreamReader inputFile)`: Construct frequency table using specified input data file.
+  - `IPFrequency(InputStreamReader inputFile)`: Construct frequency table using the specified input data file.
   
   Class Methods
   - `void addCount(String host)`: Update the frequency table with a new record.
@@ -56,14 +56,31 @@ Package processLog
   
   Constructor
   - `ResourceBandwidth()`: Construct an empty resource consumption table.
-  - `ResourceBandwidth(InputStreamReader inputFile)`: Construct resource consumption table using specified input data file.
+  - `ResourceBandwidth(InputStreamReader inputFile)`: Construct resource consumption table using the specified input data file.
   
   Class Methods
   - `void addSource(String resource, Integer bytes)`: Update the resource consumption table with a new record.
   - `List<String> getCurrTop(int n)`: Return a list of current top `n` resources that consume the most bandwidth.
   - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
   
+- **Class BusyPeriod**: Perform Feature 3 computation
   
-
-
-
+  Constructor
+  - `BusyPeriod()`: Construct an empty time table.
+  - `BusyPeriod(InputStreamReader inputFile)`: Construct the time table using the specified input data file.
+  
+  Class Methods
+  - `void addTimeCount(Long date)`: Update the time table with a new record.
+  - `List<String> getBusiest(int n)`: Return a list of current top `n` busiest 60-minute periods.
+  - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
+  
+- **Class UserCodeRecord**: Perform Feature 4 computation
+  
+  Constructor
+  - `BusyPeriod()`: Construct an empty host ststus table.
+  - `BusyPeriod(InputStreamReader inputFile)`: Construct and update the host status table using the specified input data file.
+  
+  Class Methods
+  - `void updateStatus(String dataLine, String host, int httpCode, Date timeStamp)`: Update the host status table and the blocked list with a new record.
+  - `List<String> getBlocked()`: Return a list of blocked requests.
+  - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
