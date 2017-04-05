@@ -1,4 +1,5 @@
 #!/bin/bash
+#Using Cygwin in Windows
 export PATH=$PATH:/cygdrive/C/Program\ Files/Java/jdk1.8.0_66/bin/
 javac ./src/processLog/*.java
 #Feature 1
