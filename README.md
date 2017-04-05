@@ -8,13 +8,19 @@ This is the **Insight Data Engineer Coding Challenge** in April 2017. The goal o
 
 **Dependency:** Java 7
 
-# Exectuion
+# Data Source
+The log data can be downloaded [here](https://drive.google.com/file/d/0B7-XWjN4ezogbUh6bUl1cV82Tnc/view).
+
+# Data Format
+The format of log.txt file is assumed to be ASCII. Other format, like UTF-8, may result wrong-data-line-format warning. Each data line follows the pattern `host [dd/MMM/yyyy:HH:mm:ss Z] "request" code(int) bytes(int)`.
+
+# Execution
 ```
 bash run.sh
 ```
 The `run.sh` script will execute the main class `processLog.Run` using the given input file and create four output file for the results of features. The arguments passing into ```processLog.Run``` are ```inputFile```, ```outputFile```, and ```featureLabel (1-4)```. The shell script runs ```processLog.Run``` and load ```inputFile``` for each of the four feature computations.
 
-There is another main class ```processLog.RunAllAtOnce``` which is not covered in ```run.sh```. It loads the input data once and finish computing all four features at the same time. However, this is memory costing and may cause heap space out of memory.
+There is another main class ```processLog.RunAllAtOnce``` which is not executed in ```run.sh```. It loads the input data once and finish computing all four features at the same time. However, this is memory costing and may cause heap space out of memory.
 
 # Test
 The test shell script provided by Insight runes testcases in `insight_testsuite` folder. 
