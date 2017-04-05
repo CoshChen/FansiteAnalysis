@@ -26,20 +26,22 @@ bash run_tests.sh
 # Class and Method Summary
 Package processLog
 
-- **Class Run**
+- **Class Run** (main)
 
   Class Methods
   - `static void main(String[] args)`: Perform feature computation for a specified feature.
   - `ststic void writeInToFile(List<String> result, File outputFile)`: Write result into specified output file.
   - `static void printWarning(List<String> wrongFormat)`: List data lines with wrong format (if any) in the console.
+  <br></br>
   
-- **Class RunAllAtOnce**
+- **Class RunAllAtOnce** (main)
 
   Class Methods
   - `static void main(String[] args)`: Perform feature computation for All feature at same time (i.e. read through data input file only once).
   - `static void loadData`: Load input file, extract information line by line, and build tables using for computations.   
   - `ststic void writeInToFile(List<String> result, File outputFile)`: Write result into specified output file.
   - `static void printWarning(List<String> wrongFormat)`: list data lines with wrong format (if any) in the console.
+  <br></br>
   
 - **Class IPFrequency**: Perform Feature 1 computation
   
@@ -51,6 +53,7 @@ Package processLog
   - `void addCount(String host)`: Update the frequency table with a new record.
   - `List<String> getCurrTop(int n)`: Return a list of current top `n` most active host/IP addresses.
   - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
+  <br></br>
   
 - **Class ResourceBandwidth**: Perform Feature 2 computation
   
@@ -62,6 +65,7 @@ Package processLog
   - `void addSource(String resource, Integer bytes)`: Update the resource consumption table with a new record.
   - `List<String> getCurrTop(int n)`: Return a list of current top `n` resources that consume the most bandwidth.
   - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
+  <br></br>
   
 - **Class BusyPeriod**: Perform Feature 3 computation
   
@@ -73,6 +77,7 @@ Package processLog
   - `void addTimeCount(Long date)`: Update the time table with a new record.
   - `List<String> getBusiest(int n)`: Return a list of current top `n` busiest 60-minute periods.
   - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
+  <br></br>
   
 - **Class UserCodeRecord**: Perform Feature 4 computation
   
