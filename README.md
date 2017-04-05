@@ -12,7 +12,7 @@ This is the **Insight Data Engineer Coding Challenge** in April 2017. The goal o
 The log data can be downloaded [here](https://drive.google.com/file/d/0B7-XWjN4ezogbUh6bUl1cV82Tnc/view).
 
 # Data Format
-The format of log.txt file is assumed to be ASCII. Other format, like UTF-8, may result wrong-data-line-format warning. Each data line follows the pattern `host [dd/MMM/yyyy:HH:mm:ss Z] "request" code(int) bytes(int)`.
+The format of log.txt file is assumed to be ASCII. Other format, like UTF-8, may result wrong-data-line-format warning. Each data line follows the pattern `host [dd/MMM/yyyy:HH:mm:ss Z] "request" code bytes`. Here `Z` is the time zone, `code` and `bytes` are integers.
 
 # Execution
 ```
