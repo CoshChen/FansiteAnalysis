@@ -25,39 +25,40 @@ bash run_tests.sh
 
 # Class and Method Summary
 Package processLog
-- Class Run
 
-  **Class Methods**
+- **Class Run**
+
+  Class Methods
   - `static void main(String[] args)`: Perform feature computation for a specified feature.
   - `ststic void writeInToFile(List<String> result, File outputFile)`: Write result into specified output file.
   - `static void printWarning(List<String> wrongFormat)`: List data lines with wrong format (if any) in the console.
   
-- Class RunAllAtOnce
+- **Class RunAllAtOnce**
 
-  **Class Methods**
+  Class Methods
   - `static void main(String[] args)`: Perform feature computation for All feature at same time (i.e. read through data input file only once).
   - `static void loadData`: Load input file, extract information line by line, and build tables using for computations.   
   - `ststic void writeInToFile(List<String> result, File outputFile)`: Write result into specified output file.
   - `static void printWarning(List<String> wrongFormat)`: list data lines with wrong format (if any) in the console.
   
-- Class IPFrequency: Perform Feature 1 computation
+- **Class IPFrequency**: Perform Feature 1 computation
   
-  **Constructor**
+  Constructor
   - `IPFrequency()`: Construct an empty frequency table.
   - `IPFrequency(InputStreamReader inputFile)`: Construct frequency table using specified input data file.
   
-  **Class Methods**
+  Class Methods
   - `void addCount(String host)`: Update the frequency table with a new record.
   - `List<String> getCurrTop(int n)`: Return a list of current top `n` most active host/IP addresses.
   - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
   
-- Class ResourceBandwidth: Perform Feature 2 computation
+- **Class ResourceBandwidth**: Perform Feature 2 computation
   
-  **Constructor**
+  Constructor
   - `ResourceBandwidth()`: Construct an empty resource consumption table.
   - `ResourceBandwidth(InputStreamReader inputFile)`: Construct resource consumption table using specified input data file.
   
-  **Class Methods**
+  Class Methods
   - `void addSource(String resource, Integer bytes)`: Update the resource consumption table with a new record.
   - `List<String> getCurrTop(int n)`: Return a list of current top `n` resources that consume the most bandwidth.
   - `List<String> getWrongFormat()`: Return a list of data lines in the input file that have incorrect format.
